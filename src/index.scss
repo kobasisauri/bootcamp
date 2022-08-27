@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  max-width: 1920px;
+}
+
+@font-face {
+  font-family: HelveticaNeue;
+  src: url('./Fonts/HelveticaNeue.ttc');
+}
+
+:root {
+  font-family: HelveticaNeue, sans-serif;
+}
