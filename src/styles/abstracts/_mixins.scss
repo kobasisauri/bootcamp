@@ -1,0 +1,35 @@
+@mixin content-scroll {
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 3.5rem;
+    background-color: rgba(#aaa, 0.6);
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: rgba(#aaa, 0.8);
+    }
+  }
+}
+
+@mixin light-scroll($bg: rgba(#aaa, 0.25), $bg-hover: rgba(#aaa, 0.3)) {
+  &::-webkit-scrollbar {
+    width: 0.75rem;
+    height: 0.8125rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $bg;
+    background-clip: content-box;
+    border: 0.1875rem solid transparent;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: $bg-hover;
+    }
+  }
+}
