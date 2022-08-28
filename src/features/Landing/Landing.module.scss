@@ -1,0 +1,58 @@
+@import 'styles/abstracts/variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 18px;
+  margin-top: 67px;
+}
+
+.landing-img {
+  margin-top: 117px;
+}
+
+.items {
+  width: 100%;
+  max-width: 358px;
+  margin-top: 112px;
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 18px 0;
+    color: #fff;
+    font-size: 20px;
+    background-color: $primary-color;
+    border-radius: 8px;
+
+    &:last-child {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .logo {
+    margin-top: 79px;
+  }
+
+  .landing-img {
+    margin-top: 85.43px;
+  }
+
+  .items {
+    max-width: 387px;
+    margin-top: 123px;
+
+    .item:last-child {
+      margin: 26px 0;
+    }
+  }
+}
