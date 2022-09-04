@@ -1,0 +1,75 @@
+@import 'styles/abstracts/variables';
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #4a4a4a;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 847px;
+  height: 100%;
+  padding: 171px 0 70px;
+  text-align: center;
+  background: #fff;
+}
+
+.success-message {
+  width: 50%;
+  margin-top: -15px;
+  margin-bottom: 159px;
+  color: #292929;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 39px;
+}
+
+.list-button {
+  margin-bottom: 38px;
+  padding: 18px 65.5px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  background-color: $primary-color;
+  border: none;
+  border-radius: 8px;
+}
+
+.main {
+  color: #0089a7;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@media only screen and (min-width: 992px) {
+  .modal {
+    height: auto;
+    padding: 34px 0 44px;
+    border-radius: 8px;
+  }
+
+  .success-message {
+    width: 100%;
+    margin-top: -30px;
+    margin-bottom: 79px;
+    font-size: 25px;
+    line-height: 31px;
+  }
+
+  .list-button {
+    margin-bottom: 28px;
+  }
+}
