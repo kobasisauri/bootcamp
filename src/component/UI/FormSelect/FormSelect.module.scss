@@ -1,0 +1,51 @@
+@import 'styles/abstracts/variables';
+
+.dropdown-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.loader {
+  position: absolute;
+  inset: 0;
+  background: rgb(255 255 255 / 40%);
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 25px 20px 16px;
+  font-size: 18px;
+  line-height: 21px;
+  background: #ebebeb;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &.error {
+    border: 1px solid $danger-color;
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  filter: drop-shadow(0 4px 34px rgb(0 0 0 / 25%));
+}
+
+.dropdown-item {
+  padding: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  &:hover {
+    background: #e7f0f8;
+    cursor: pointer;
+  }
+}
