@@ -1,0 +1,134 @@
+@import 'styles/abstracts/variables';
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  background-color: $bg-color;
+}
+
+.arrow-container {
+  position: absolute;
+  top: 34px;
+  left: 20px;
+  background-color: none;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 31px;
+  padding-bottom: 11px;
+}
+
+.tab {
+  display: none;
+  font-weight: 700;
+  font-size: 16px;
+
+  &.active {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding-bottom: 5px;
+  }
+}
+
+.step {
+  color: #898989;
+  font-size: 14px;
+}
+
+.form-wrapper {
+  box-sizing: border-box;
+  max-width: 1226px;
+  margin: 0 auto;
+  padding: 38px 16px 58px;
+  background-color: #fff;
+  border-radius: 12px 12px 0 0;
+
+  &.laptop {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.logo {
+  display: none;
+  justify-content: center;
+  padding-top: 67px;
+  padding-bottom: 45px;
+  background-color: $bg-color;
+}
+
+@media only screen and (min-width: 768px) {
+  .form-wrapper {
+    width: 95%;
+    padding: 96px 174px 44px;
+    border-radius: 18px;
+
+    &.laptop {
+      padding: 68px 174px 44px;
+      background-color: #fff;
+    }
+  }
+
+  .arrow-container {
+    position: absolute;
+    top: 53px;
+    left: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    background-color: $bg-colot-dark;
+    border-radius: 50%;
+  }
+
+  .tabs {
+    flex-direction: row;
+    align-items: start;
+    padding-top: 91px;
+    padding-bottom: 27px;
+  }
+
+  .tab {
+    display: block;
+    font-size: 20px;
+
+    &:first-child {
+      margin-right: 33px;
+    }
+
+    &:last-child {
+      margin-left: 33px;
+    }
+
+    &.active {
+      position: relative;
+      z-index: 1;
+      display: block;
+      padding-bottom: 15px;
+    }
+
+    &.active::before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 185px;
+      border-bottom: 2px solid #000;
+      transform: translateX(-50%);
+      content: '';
+    }
+  }
+
+  .step {
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+  }
+}
