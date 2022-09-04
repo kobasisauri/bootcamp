@@ -106,7 +106,6 @@ const LaptopForm = () => {
           handleBlur,
           handleSubmit,
           setFieldValue,
-          validateForm,
         }) => (
           <form onSubmit={handleSubmit} id="2">
             <div className={styles['inner-wrapper']}>

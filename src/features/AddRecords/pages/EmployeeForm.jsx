@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -46,16 +46,25 @@ const validationSchema = Yup.object().shape({
 const EmployeeForm = () => {
   const navigate = useNavigate();
   const isMobile = useIsMobile();
+  const initial = useRef(false);
+  const [teamId, setTeamId] = useState();
+  const [positions, setPositions] = useState([]);
 
   const teamInitialId = JSON.parse(window.localStorage.getItem('form'))
     ? JSON.parse(window.localStorage.getItem('form'))?.values?.team?.id
     : null;
 
-  const [positions, setPositions] = useState();
-
   useEffect(() => {
-    getSpecificPositions(teamInitialId);
-  }, [teamInitialId]);
+    setPositions([]);
+
+    if (!initial.current && teamInitialId) {
+      getSpecificPositions(teamInitialId);
+
+      initial.current = true;
+    } else {
+      getSpecificPositions(teamId);
+    }
+  }, [teamId, teamInitialId]);
 
   const onSubmit = (values) => {
     navigate('../laptop', { state: values });
@@ -121,7 +130,7 @@ const EmployeeForm = () => {
             valChange={(value) => {
               setFieldValue('team', value);
               setFieldValue('position', '');
-              getSpecificPositions(value?.id);
+              setTeamId(value?.id);
             }}
             isInvalid={!!(touched.team && errors.team)}
           />
