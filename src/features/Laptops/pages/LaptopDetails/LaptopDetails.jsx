@@ -146,7 +146,11 @@ function LaptopDetails() {
               </ul>
 
               <ul className={styles.values}>
-                <li>{laptopData.purchase_date.replaceAll('-', ' / ')}</li>
+                <li>
+                  {laptopData.purchase_date
+                    ? laptopData.purchase_date.replaceAll('-', ' / ')
+                    : ''}
+                </li>
               </ul>
             </div>
           </div>
