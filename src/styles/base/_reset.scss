@@ -2,6 +2,16 @@ html {
   font-size: 1rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 body {
   max-width: 1920px;
   margin: 0;
@@ -14,12 +24,26 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  margin-bottom: 0;
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a {
   text-decoration: none;
+}
+
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+  display: none;
+  appearance: none;
 }
 
 @font-face {
