@@ -19,10 +19,10 @@ const Landing = () => {
       </picture>
 
       <div className={styles.items}>
-        <Link to="/add-records" className={styles.item}>
+        <Link to="/add-records/employee" className={styles.item}>
           ჩანაწერის დამატება
         </Link>
-        <Link to="" className={styles.item}>
+        <Link to="/laptops" className={styles.item}>
           ჩანაწერების სია
         </Link>
       </div>

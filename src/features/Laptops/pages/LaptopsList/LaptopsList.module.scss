@@ -1,0 +1,140 @@
+@import 'styles/abstracts/variables';
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 31px;
+  margin-bottom: 33px;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.header h3 {
+  color: #232323;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.list {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.item {
+  display: flex;
+  margin-bottom: 26px;
+  padding: 7px;
+  background: #eafaff;
+  border: 1px solid #aed1ea;
+  border-radius: 10px;
+}
+
+.item img {
+  width: 50%;
+  height: 109px;
+  margin-right: 16px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.user-name {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: $text-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.laptop {
+  margin-bottom: 11px;
+  color: $text-color;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.details {
+  color: #4386a9;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    margin-top: 79px;
+    margin-bottom: 97px;
+  }
+
+  .back {
+    top: -26px;
+    left: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    height: 53px;
+    background-color: $bg-colot-dark;
+    border-radius: 50%;
+  }
+
+  .header h3 {
+    color: #000;
+    font-size: 34px;
+    line-height: 21px;
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1447px;
+    margin: 0 auto;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  .item {
+    margin-bottom: 55px;
+    padding: 14px;
+  }
+
+  .col {
+    width: 50%;
+  }
+
+  .col:nth-child(2n + 1) {
+    padding-right: 26px;
+  }
+
+  .col:nth-child(2n) {
+    padding-left: 26px;
+  }
+
+  .item img {
+    height: 178px;
+    margin-right: 28px;
+  }
+
+  .user-name {
+    margin-top: 31px;
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+
+  .laptop {
+    margin-bottom: 40px;
+  }
+
+  .details {
+    font-size: 16px;
+  }
+}
