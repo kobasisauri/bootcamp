@@ -1,0 +1,182 @@
+@import 'styles/abstracts/variables';
+
+.input {
+  margin-bottom: 23px;
+}
+
+.team {
+  margin-bottom: 46px;
+}
+
+.position {
+  margin-bottom: 25px;
+}
+
+.inner-wrapper {
+  margin-bottom: 10px;
+  padding: 29px 16px;
+  background: #fff;
+  border-radius: 12px;
+
+  &:nth-child(2) .select {
+    margin-bottom: 42px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    padding: 24px 16px 48px;
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-laptop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 12px 27.5px;
+  color: #fff;
+  font-size: 18px;
+  background-color: $primary-color;
+  border: none;
+  border-radius: 8px;
+}
+
+.lap-button {
+  padding: 12px 14.5px;
+  color: #fff;
+  font-size: 18px;
+  background-color: $primary-color;
+  border: none;
+  border-radius: 8px;
+}
+
+.label {
+  margin-left: 18px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.back {
+  color: $primary-color;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.radio-container {
+  margin-top: 26px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.radio-label-error {
+  color: $danger-color;
+}
+
+.error-icon {
+  width: 22.11px;
+  height: 20px;
+  margin-left: 14px;
+}
+
+.last-radio-buttons {
+  margin-top: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .row {
+    display: flex;
+    justify-content: space-between;
+
+    .col-2 {
+      width: 50%;
+    }
+
+    .col-2:first-child {
+      margin-right: 32px;
+    }
+
+    .col-2:last-child {
+      margin-left: 32px;
+    }
+
+    .col-3 {
+      width: 33.33%;
+    }
+
+    .col-3:first-child {
+      margin-right: 12px;
+    }
+
+    .col-3:nth-child(2) {
+      margin-right: 12px;
+      margin-left: 12px;
+    }
+
+    .col-3:last-child {
+      margin-left: 12px;
+    }
+
+    .select {
+      margin-top: 29px;
+    }
+  }
+
+  .team {
+    margin-bottom: 53px;
+  }
+
+  .position {
+    margin-bottom: 51px;
+  }
+
+  .inner-wrapper {
+    margin-bottom: 50px;
+    padding: 0;
+    border-bottom: 1px solid #c7c7c7;
+    border-radius: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+      border: none;
+    }
+  }
+
+  .input {
+    margin-bottom: 52px;
+  }
+
+  .button {
+    margin-top: 43px;
+    padding: 18px 45px;
+    font-size: 20px;
+  }
+
+  .button-laptop {
+    margin-top: 76px;
+
+    .lap-button {
+      margin-top: 20px;
+      padding: 18px 35.5px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+}
